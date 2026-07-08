@@ -55,7 +55,7 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
     - name: Cache gems
-      uses: actions/cache@v2
+      uses: actions/cache@v6
       with:
         path: vendor/bundle
         key: ${{ runner.os }}-gems-${{ matrix.ruby }}-${{ hashFiles(matrix.gemfile) }}
